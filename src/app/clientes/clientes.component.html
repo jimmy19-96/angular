@@ -1,0 +1,44 @@
+<div class="row mt-4">
+    <div class="col-md-4 mx-auto">
+        <div class="card bg-black text-white">
+            <div class="card-header pt-5">
+                <h4 class="text-center">
+                    Registro del cliente
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="name">Nombre:</label>
+                    <input type="text" class="form-control bg-dark text-white" name="name" placeholder="Nombre" />
+                </div>
+                <div class="mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control bg-dark text-white" name="password"
+                        placeholder="Password" />
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [(ngModel)]="confirmacion">
+                    <label class="form-check-label" for="flexCheckDefault">¿Quieres ser contactado?</label>
+                </div>
+                <div *ngIf="confirmacion">
+                    <div class="mb-3">
+                        <label for="email">Correo:</label>
+                        <input type="email" class="form-control bg-dark text-white" name="email" placeholder="Email" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono">Telefono:</label>
+                        <input type="number" class="form-control bg-dark text-white" name="telefono"
+                            placeholder="Telefono" />
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button class="btn w-100 mt-1" style="background-color: rgb(255, 87, 51)" (click)="registro()">Registrar Cliente</button>
+                </div>
+            </div>
+            <div class="card-footer text-center">
+                <a class="btn btn-light w-100" href="/inicio">Inicio</a>
+            </div>
+        </div>
+    </div>
+</div>
